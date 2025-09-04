@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Odisseia Matemática 2049</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "@google/genai": "https://esm.sh/@google/genai@^0.15.0",
+          "marked": "https://esm.sh/marked@^15.0.8"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="app-container">
+      <header>
+        <h1>ODISSEIA MATEMÁTICA 2049</h1>
+        <div id="score-container">PONTUAÇÃO: 0</div>
+      </header>
+      <main id="game-container">
+        <div id="start-screen">
+          <h2>SELECIONE SUA DIFICULDADE</h2>
+          <div id="difficulty-selection">
+            <button class="difficulty-button" data-difficulty="Fácil">CADETE (FÁCIL)</button>
+            <button class="difficulty-button" data-difficulty="Médio">PILOTO (MÉDIO)</button>
+            <button class="difficulty-button" data-difficulty="Difícil">COMANDANTE (DIFÍCIL)</button>
+          </div>
+        </div>
+        <div id="game-screen" class="hidden">
+          <div id="question-container">
+            <p id="question-text">Gerando transmissão...</p>
+          </div>
+          <div id="options-container"></div>
+          <div id="feedback-container"></div>
+        </div>
+        <div id="end-screen" class="hidden">
+            <h2>MISSÃO COMPLETA</h2>
+            <p id="final-score"></p>
+            <button id="play-again-button">JOGAR NOVAMENTE</button>
+        </div>
+      </main>
+      <footer>
+        <p>Um jogo por @Thur.v1._</p>
+      </footer>
+    </div>
+    <script type="module" src="index.tsx"></script>
+  </body>
+</html>
